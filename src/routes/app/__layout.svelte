@@ -4,8 +4,9 @@
 
     <header>
         <nav>
-            <a href="/auth/profile">Profile</a>
-            <a href="">Logout</a>
+            <a href="/app/categories">Categories</a>
+            <a href="/app/lists">Lists</a>
+            <!-- <a href="">Logout</a> -->
         </nav>
     </header>
 

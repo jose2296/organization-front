@@ -1,27 +1,27 @@
 <script lang="ts">
-	import axios from "axios";
-	import { onMount } from 'svelte';
+	// import axios from "axios";
+	// import { onMount } from 'svelte';
 
-    let userData: {categories: any[]};
+    // let userData: {categories: any[]};
 
-    onMount(async () => {
-        const token = localStorage.getItem('token');
-        const options = {
-            headers: {
-                authorization: `Bearer ${token}`
-            }
-        }
+    // onMount(async () => {
+    //     const token = localStorage.getItem('token');
+    //     const options = {
+    //         headers: {
+    //             authorization: `Bearer ${token}`
+    //         }
+    //     }
 
-        userData = await (await axios.get('http://localhost:3001/users', options)).data;
+    //     userData = await (await axios.get('http://localhost:3001/users', options)).data;
 
-        console.log(userData);
+    //     console.log(userData);
 
-    })
+    // })
 
 </script>
 
 
-<h1>List of categories</h1>
+<!-- <h1>List of categories</h1>
 
 {#if !userData}
     <p>Loading...</p>
@@ -31,4 +31,4 @@
     {#each userData.categories || [] as category}
         <p><a href={`/app/categories/${category.id}`}>{category.name} </a></p>
     {/each}
-{/if}
+{/if} -->
