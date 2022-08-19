@@ -1,0 +1,11 @@
+{
+    "name": "Organization App",
+    "short_name": "Organization App",
+    "start_url": "./",
+    "display": "standalone",
+    "icons": [{
+      "src": "./app-icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }]
+}

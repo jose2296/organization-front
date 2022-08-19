@@ -1,9 +1,9 @@
 export const manifest = {
 	appDir: "_app",
-	assets: new Set(["app-icon.png","favicon.png","manifest.json","offline.html","service-worker.js"]),
-	mimeTypes: {".png":"image/png",".json":"application/json",".html":"text/html"},
+	assets: new Set(["app-icon.png","favicon.png","manifest.webmanifest","offline.html","service-worker.js"]),
+	mimeTypes: {".png":"image/png",".webmanifest":"application/manifest+json",".html":"text/html"},
 	_: {
-		entry: {"file":"_app/immutable/start-56e11baf.js","imports":["_app/immutable/start-56e11baf.js","_app/immutable/chunks/index-d3d2aee4.js","_app/immutable/chunks/preload-helper-c28b9807.js","_app/immutable/chunks/singletons-eca981c1.js"],"stylesheets":[]},
+		entry: {"file":"_app/immutable/start-fd77e256.js","imports":["_app/immutable/start-fd77e256.js","_app/immutable/chunks/index-d3d2aee4.js","_app/immutable/chunks/preload-helper-c28b9807.js","_app/immutable/chunks/singletons-eca981c1.js"],"stylesheets":[]},
 		nodes: [
 			() => import('./server/nodes/0.js'),
 			() => import('./server/nodes/1.js'),

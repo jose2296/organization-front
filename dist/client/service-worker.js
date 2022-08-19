@@ -1,5 +1,5 @@
 const m = [
-  "/_app/immutable/start-56e11baf.js",
+  "/_app/immutable/start-fd77e256.js",
   "/_app/immutable/layout.svelte-035b28ea.js",
   "/_app/immutable/error.svelte-dad1062c.js",
   "/_app/immutable/pages/app/__layout.svelte-e9c7bdac.js",
@@ -23,9 +23,9 @@ const m = [
 ], r = [
   "/app-icon.png",
   "/favicon.png",
-  "/manifest.json",
+  "/manifest.webmanifest",
   "/offline.html"
-], i = "1660925255775", t = self, n = `cache${i}`, l = m.concat(r), u = new Set(l);
+], i = "1660926004779", t = self, n = `cache${i}`, l = m.concat(r), u = new Set(l);
 t.addEventListener("install", (e) => {
   e.waitUntil(
     caches.open(n).then((a) => a.addAll(l)).then(() => {

@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "_app/immutable/start-56e11baf.js",
+    "file": "_app/immutable/start-fd77e256.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -176,12 +176,12 @@
     "src": "node_modules/@ezzing/web-components/components/icon/icon.component.js",
     "isDynamicEntry": true
   },
-  "src/routes/app/categories/[categoryId].css": {
-    "file": "_app/immutable/assets/[categoryId]-a9a52c28.css",
-    "src": "src/routes/app/categories/[categoryId].css"
-  },
   "src/routes/app/lists/[listId].css": {
     "file": "_app/immutable/assets/[listId]-edeabe98.css",
     "src": "src/routes/app/lists/[listId].css"
+  },
+  "src/routes/app/categories/[categoryId].css": {
+    "file": "_app/immutable/assets/[categoryId]-a9a52c28.css",
+    "src": "src/routes/app/categories/[categoryId].css"
   }
 }
