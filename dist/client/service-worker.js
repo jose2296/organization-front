@@ -1,5 +1,5 @@
 const m = [
-  "/_app/immutable/start-339cecc6.js",
+  "/_app/immutable/start-56e11baf.js",
   "/_app/immutable/layout.svelte-035b28ea.js",
   "/_app/immutable/error.svelte-dad1062c.js",
   "/_app/immutable/pages/app/__layout.svelte-e9c7bdac.js",
@@ -21,43 +21,44 @@ const m = [
   "/_app/immutable/chunks/index-c00af6b7.js",
   "/_app/immutable/chunks/icon.component-7ac4b900.js"
 ], r = [
+  "/app-icon.png",
   "/favicon.png",
   "/manifest.json",
   "/offline.html"
-], i = "1660919252899", t = self, n = `cache${i}`, l = m.concat(r), u = new Set(l);
+], i = "1660925255775", t = self, n = `cache${i}`, l = m.concat(r), u = new Set(l);
 t.addEventListener("install", (e) => {
   e.waitUntil(
-    caches.open(n).then((s) => s.addAll(l)).then(() => {
+    caches.open(n).then((a) => a.addAll(l)).then(() => {
       t.skipWaiting();
     })
   );
 });
 t.addEventListener("activate", (e) => {
   e.waitUntil(
-    caches.keys().then(async (s) => {
-      for (const a of s)
-        a !== n && await caches.delete(a);
+    caches.keys().then(async (a) => {
+      for (const s of a)
+        s !== n && await caches.delete(s);
       t.clients.claim();
     })
   );
 });
 async function h(e) {
-  const s = await caches.open(`offline${i}`);
+  const a = await caches.open(`offline${i}`);
   try {
-    const a = await fetch(e);
-    return s.put(e, a.clone()), a;
-  } catch (a) {
-    const c = await s.match(e);
+    const s = await fetch(e);
+    return a.put(e, s.clone()), s;
+  } catch (s) {
+    const c = await a.match(e);
     if (c)
       return c;
-    throw a;
+    throw s;
   }
 }
 t.addEventListener("fetch", (e) => {
   if (e.request.method !== "GET" || e.request.headers.has("range"))
     return;
-  const s = new URL(e.request.url), a = s.protocol.startsWith("http"), c = s.hostname === self.location.hostname && s.port !== self.location.port, p = s.host === self.location.host && u.has(s.pathname), o = e.request.cache === "only-if-cached" && !p;
-  a && !c && !o && e.respondWith(
+  const a = new URL(e.request.url), s = a.protocol.startsWith("http"), c = a.hostname === self.location.hostname && a.port !== self.location.port, p = a.host === self.location.host && u.has(a.pathname), o = e.request.cache === "only-if-cached" && !p;
+  s && !c && !o && e.respondWith(
     (async () => p && await caches.match(e.request) || h(e.request))()
   );
 });
