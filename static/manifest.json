@@ -1,0 +1,11 @@
+{
+    "short_name": "TEST",
+    "name": "TEST",
+    "start_url": "/",
+    "icons": [],
+    "background-color": "red",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "red",
+    "description": "TEST"
+}

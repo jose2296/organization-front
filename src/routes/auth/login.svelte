@@ -20,6 +20,7 @@
 <script lang="ts">
   import { goto } from '$app/navigation';
   import axios from 'axios';
+  const apiUrl = import.meta.env.VITE_API_URL;
 
   let email = ""
   let password = ""
@@ -33,7 +34,7 @@
     };
 
 
-    const loginResponse = await axios.post('http://localhost:3001/auth/login', data)
+    const loginResponse = await axios.post(`${apiUrl}/auth/login`, data)
 
     const token = loginResponse.data.access_token;
 

@@ -2,6 +2,7 @@
   import { page } from '$app/stores';
   import axios from "axios";
   import { onMount } from 'svelte';
+  const apiUrl = import.meta.env.VITE_API_URL;
 
   const categoryId = $page.params.categoryId;
 
@@ -17,7 +18,7 @@
           }
       }
 
-      category = await (await axios.get('http://localhost:3001/categories/' + categoryId, options)).data;
+      category = await (await axios.get(`${apiUrl}/categories/${categoryId}`, options)).data;
 
       console.log(category);
 

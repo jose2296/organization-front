@@ -8,9 +8,16 @@
 		"preview": "vite preview",
 		"check": "svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
-		"lint": "eslint ."
+		"lint": "eslint .",
+		"start": "node .svelte-kit/build/index.js"
 	},
 	"devDependencies": {
+	},
+	"type": "module",
+	"dependencies": {
+		"@ezzing/web-components": "^0.0.10",
+		"axios": "^0.27.2",
+		"@sveltejs/adapter-node": "next",
 		"@sveltejs/adapter-auto": "next",
 		"@sveltejs/kit": "next",
 		"@typescript-eslint/eslint-plugin": "^5.27.0",
@@ -24,10 +31,5 @@
 		"tslib": "^2.3.1",
 		"typescript": "^4.7.4",
 		"vite": "^3.0.0"
-	},
-	"type": "module",
-	"dependencies": {
-		"@ezzing/web-components": "^0.0.10",
-		"axios": "^0.27.2"
 	}
 }

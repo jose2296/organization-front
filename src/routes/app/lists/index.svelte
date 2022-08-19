@@ -1,6 +1,7 @@
 <script lang="ts">
 	import axios from "axios";
 	import { onMount } from 'svelte';
+    const apiUrl = import.meta.env.VITE_API_URL;
 
     let lists: any[];
 
@@ -12,7 +13,7 @@
             }
         }
 
-        lists = await (await axios.get('http://localhost:3001/lists', options)).data;
+        lists = await (await axios.get(`${apiUrl}/lists`, options)).data;
 
         console.log(lists);
 

@@ -1,6 +1,7 @@
 <script lang="ts">
 	import axios from "axios";
 	import { onMount } from 'svelte';
+    const apiUrl = import.meta.env.VITE_API_URL;
 
     let userData: {categories: any[]};
 
@@ -12,7 +13,7 @@
             }
         }
 
-        userData = await (await axios.get('http://localhost:3001/users', options)).data;
+        userData = await (await axios.get(`${apiUrl}/users`, options)).data;
 
         console.log(userData);
 

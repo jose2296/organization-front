@@ -2,6 +2,7 @@
   import { page } from '$app/stores';
   import axios from "axios";
   import { onMount } from 'svelte';
+  const apiUrl = import.meta.env.VITE_API_URL;
 
   const listId = $page.params.listId;
 
@@ -17,10 +18,9 @@
           }
       }
 
-      list = await (await axios.get('http://localhost:3001/lists/' + listId, options)).data;
+      list = await (await axios.get(`${apiUrl}/lists/${listId}`, options)).data;
 
       console.log(list);
-
   })
 </script>
 
@@ -49,8 +49,6 @@
 
 {#if list}
     <h3>{list.name}</h3>
-
-    <ezz-icon name={list.icon} color={list.color} />
 
     <h4>Items: </h4>
     {#each list.listItems as listItem}
